@@ -1,24 +1,45 @@
-# Map
+# @ngx-jmmluna/map
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+Libreria de mapa basada en OpenLayers.
 
-## Code scaffolding
+## Uso
 
-Run `ng generate component component-name --project map` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project map`.
-> Note: Don't forget to add `--project map` or else it will be added to the default project in your `angular.json` file. 
+Para instalar la libreria:
 
-## Build
+```js
+npm install @ngx-jmmluna/map
+```
 
-Run `ng build map` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para usar el componente mapa es necesario importar el módulo de la libreria en la aplicación:
 
-## Publishing
+```typescript
+import { MapModule } from "@ngx-jmmluna/map";
+```
 
-After building your library with `ng build map`, go to the dist folder `cd dist/map` and run `npm publish`.
+```
+<lib-map height="100%" width="300" [zoom]="5" projection="EPSG:4326" position="absolute"></lib-map>
+```
 
-## Running unit tests
+- Puedes especificar parámetros css al mapa sobreescribiendo la clase _.map-container_.
+- La proyección por defecto es _EPSG:3857_.
+- Con position puedes modificar la ubicación del mapa en el DOM, por defecto es _Fixed_.
 
-Run `ng test map` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Desarrollo
 
-## Further help
+Ejecutar:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm install
+```
+
+Levantar aplicación de prueba para desarrollo:
+
+```
+ng serve
+```
+
+y ejecutar en el navegador:
+
+```
+http://127.0.0.1:4200/
+```
