@@ -18,11 +18,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ngx-jmmluna/map": [
-        "dist/ngx-jmmluna/map/ngx-jmmluna-map",
-        "dist/ngx-jmmluna/map"
-      ],
-      "test-lib": ["dist/test-lib/test-lib", "dist/test-lib"]
+      "@ngx-jmmluna/map": ["projects/ngx-jmmluna/map/src/public-api"]
     },
     "skipLibCheck": true
   },

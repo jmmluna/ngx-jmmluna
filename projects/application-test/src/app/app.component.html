@@ -1,7 +1,8 @@
-<h1>Bienvenido a la Aplicación test del workspace</h1>
-<lib-test-lib></lib-test-lib>
+<h1 style="text-align: center">
+    Bienvenido a la Aplicación test del workspace
+</h1>
 
-<div class="wrapper">
+<!--div class="wrapper">
     <div class="half">
         <h4>Mapa 1: Cáceres - Plasencia</h4>
         <lib-map #mapa1 mapId="mapa1" height="400px" width="450px" [zoom]="6" [lat]="-692978.098433" [lon]="4869191.575822"></lib-map>
@@ -10,4 +11,34 @@
         <h4>Mapa 2 - Andalucía - Córdoba</h4>
         <lib-map height="400px" width="450px" [zoom]="6"></lib-map>
     </div>
+    </div>-->
+
+<div class="container">
+    <h4>Mapa 1: Cáceres - Plasencia</h4>
+    <lib-map #mapa1 mapId="mapa1" height="400px" width="450px" [zoom]="6" [lat]="-692978.098433" [lon]="4869191.575822" position="absolute"></lib-map>
 </div>
+
+<div class="container">
+    <h4>Mapa 2 - Andalucía - Córdoba</h4>
+    <lib-map height="400px" width="450px" [zoom]="6" position="absolute"></lib-map>
+</div>
+
+<!--<div class="container">
+    <h4>Mapa 2 - Andalucía - Córdoba</h4>
+    <lib-map height="400px" width="450px" [zoom]="6" position="absolute"></lib-map>
+</div>
+
+<div class="container">
+    <h4>Mapa 1: Cáceres - Plasencia</h4>
+    <lib-map height="400px" width="450px" [zoom]="6" [lat]="-692978.098433" [lon]="4869191.575822" position="absolute"></lib-map>
+</div>
+
+<div class="container">
+    <h4>Mapa 2 - Andalucía - Córdoba</h4>
+    <lib-map height="400px" width="450px" [zoom]="6" position="absolute"></lib-map>
+</div>
+
+<div class="container">
+    <h4>Mapa 2 - Andalucía - Córdoba</h4>
+    <lib-map height="400px" width="450px" [zoom]="6" position="absolute"></lib-map>
+</div>-->

@@ -1,20 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TestLibModule } from 'test-lib';
-//import { TestLibComponent } from 'test-lib';
-import { TestLibComponent } from '../../../test-lib/src/public-api';
-/*import {
-  MapModule,
-  MapComponent,
-} from '../../../ngx-jmmluna/map/src/public-api';*/
-import { MapModule } from 'projects/ngx-jmmluna/map/src/public-api';
-
 import { AppComponent } from './app.component';
+import { MapModule } from '@ngx-jmmluna/map';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, TestLibModule, MapModule],
+  imports: [BrowserModule, MapModule],
   providers: [],
-  bootstrap: [AppComponent, TestLibComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
