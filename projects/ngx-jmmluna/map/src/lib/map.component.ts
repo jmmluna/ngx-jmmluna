@@ -21,7 +21,7 @@ const DEFAULT_LAT = -519771.792339;
 const DEFAULT_LON = 4530575.540519;
 
 @Component({
-  selector: 'lib-map',
+  selector: 'jmmluna-map',
   templateUrl: 'map.component.html',
 })
 export class MapComponent implements OnInit {

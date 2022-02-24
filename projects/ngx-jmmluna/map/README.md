@@ -17,13 +17,13 @@ import { MapModule } from "@ngx-jmmluna/map";
 ```
 
 ```html
-<lib-map
+<jmmluna-map
   height="100%"
   width="300"
   [zoom]="5"
   projection="EPSG:4326"
   position="absolute"
-></lib-map>
+></jmmluna-map>
 ```
 
 - Puedes especificar parámetros css al mapa sobreescribiendo la clase _.map-container_.
@@ -34,23 +34,3 @@ import { MapModule } from "@ngx-jmmluna/map";
 - **zoom:** espcificar el zoom inicial del mapa. El valor `por defecto es 1.
 - **lat:** latitud inicial del mapa.
 - **lon:** longitud inicial del mapa.
-
-## Desarrollo
-
-Ejecutar:
-
-```
-npm install
-```
-
-Levantar aplicación de prueba para desarrollo:
-
-```
-ng serve
-```
-
-y ejecutar en el navegador:
-
-```
-http://127.0.0.1:4200/
-```
