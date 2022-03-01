@@ -1,16 +1,10 @@
-import {
-  Component,
-  OnInit,
-  AfterViewInit,
-  Input,
-  ElementRef,
-} from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import Map from 'ol/Map';
 import View from 'ol/View';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import { OSM, Vector as VectorSource } from 'ol/source';
-import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 import GeoJSON from 'ol/format/GeoJSON';
+import { layerStyle } from './LayerStyle';
 
 const DEFAULT_HEIGHT = '400px';
 const DEFAULT_WIDTH = '400px';
@@ -47,34 +41,16 @@ export class MapComponent implements OnInit {
     mapStyle.position = this.position || DEFAULT_POSITION;
   }
 
-  loadData(geojson: string): void {
-    const styles = [
-      new Style({
-        stroke: new Stroke({
-          color: 'blue',
-          width: 3,
-        }),
-        fill: new Fill({
-          color: 'rgba(0, 0, 255, 0.1)',
-        }),
-      }),
-      new Style({
-        image: new CircleStyle({
-          radius: 5,
-          fill: new Fill({
-            color: 'orange',
-          }),
-        }),
-      }),
-    ];
-
+  loadData(geojson: string, layerStyleDef: any): void {
     const vectorSource = new VectorSource({
       features: new GeoJSON().readFeatures(geojson),
     });
 
     const vectorLayer = new VectorLayer({
       source: vectorSource,
-      style: styles,
+      style: function (feature, resolution) {
+        return layerStyle.getStyle(layerStyleDef, feature, resolution);
+      },
     });
 
     this.map.addLayer(vectorLayer);
