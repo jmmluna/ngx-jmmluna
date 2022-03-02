@@ -1,14 +1,18 @@
 # @ngx-jmmluna/map
 
 Libreria de mapa basada en OpenLayers.
+## Objetivo
+Este proyecto tiene como principal objetivo integrar mapas en cualquier proyecto angular, evitando el alto acoplamiento de terceros así como aportar facilidad y agilidad en su uso. **@ngx-jmmluna/map** nace con la idea de aislar la implementación concreta de los requerimientos geográficos de cualquier aplicación que necesite el uso de mapas. 
 
-## Uso
+## Instalación
 
-Para instalar la libreria:
+Antes de poder usar la libería en cualquier proyecto angunlr será necesario instalarla previamente de la siguiente manera:
 
 ```js
 npm install @ngx-jmmluna/map
 ```
+
+## Uso
 
 Para usar el componente mapa es necesario importar el módulo de la libreria en la aplicación:
 
